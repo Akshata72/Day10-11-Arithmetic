@@ -5,4 +5,5 @@ read -p"Enter a input c:" c
 
 echo $a"+"$b"*"$c"="$((($a+$b)*$c))
 
+echo $a"*"$b"+"$c"="$(($a*$b+$c))
 
