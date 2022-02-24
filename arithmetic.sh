@@ -26,3 +26,21 @@ arithmetic[1]=${arithmetic[ma]}
 arithmetic[2]=${arithmetic[ad]}
 arithmetic[3]=${arithmetic[pa]}
 echo ${arithmetic[@]}
+
+
+#sorting descending order
+echo "before sorting: " ${arithmetic[@]}
+	for((i=0;i<=3;i++))
+	do
+		for((j=i+1;j<=3;j++))
+		do
+			if(( ${arithmetic[i]} < ${arithmetic[j]}))
+			then
+				temp=${arithmetic[i]}
+				arithmetic[$i]=${arithmetic[j]}
+				arithmetic[$j]=$temp
+			fi
+		done
+	done
+echo "after soting:" ${arithmetic[@]}
+
