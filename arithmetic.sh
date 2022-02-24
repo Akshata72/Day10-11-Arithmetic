@@ -44,3 +44,23 @@ echo "before sorting: " ${arithmetic[@]}
 	done
 echo "after soting:" ${arithmetic[@]}
 
+
+
+#sorting accending order
+echo "before sorting: " ${arithmetic[@]}
+        for((i=0;i<=3;i++))
+        do
+                for((j=i+1;j<=3;j++))
+                do
+                        if(( ${arithmetic[i]} > ${arithmetic[j]}))
+                        then
+                                temp=${arithmetic[i]}
+                                arithmetic[$i]=${arithmetic[j]}
+                                arithmetic[$j]=$temp
+                        fi
+                done
+        done
+echo "after soting:" ${arithmetic[@]}
+
+
+
